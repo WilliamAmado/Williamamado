@@ -1,0 +1,13 @@
+
+<<<<<<< HEAD
+spring.datasource.url=jdbc:mysql://10.0.0.59:3306/alquiler?serverTimezone=UTC&serverRsaPublicKeyFile=/home/opc/ssh-key-2022-09-16.key
+
+>>>>>>> origin/main
+spring.datasource.username=ADMIN
+spring.datasource.password=Ingeniero2***
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.open-in-view = false
+spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL8Dialect
+spring.jpa.properties.hibernate.enable_lazy_load_no_trans=true
+server.port=8080
+

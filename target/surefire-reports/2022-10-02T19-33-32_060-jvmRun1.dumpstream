@@ -1,0 +1,65 @@
+# Created at 2022-10-02T19:33:38.930
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: null
+java.io.EOFException
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:397)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+
+# Created at 2022-10-02T19:33:41.087
+Unexpected IOException with stream: 2022-10-02 19:33:41.085  INFO 5692 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+
+
+# Created at 2022-10-02T19:33:41.486
+Unexpected IOException with stream: 2022-10-02 19:33:41.483  INFO 5692 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 348 ms. Found 6 JPA repository interfaces.
+
+
+# Created at 2022-10-02T19:33:44.276
+Unexpected IOException with stream: 2022-10-02 19:33:44.275  INFO 5692 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+
+
+# Created at 2022-10-02T19:33:44.536
+Unexpected IOException with stream: 2022-10-02 19:33:44.535  INFO 5692 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.11.Final
+
+
+# Created at 2022-10-02T19:33:45.417
+Unexpected IOException with stream: 2022-10-02 19:33:45.416  INFO 5692 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+
+
+# Created at 2022-10-02T19:33:46.713
+Unexpected IOException with stream: 2022-10-02 19:33:46.708  INFO 5692 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+
+
+# Created at 2022-10-02T19:33:48.699
+Unexpected IOException with stream: 2022-10-02 19:33:48.698  INFO 5692 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+
+
+# Created at 2022-10-02T19:33:48.800
+Unexpected IOException with stream: 2022-10-02 19:33:48.796  INFO 5692 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+
+
+# Created at 2022-10-02T19:33:53.873
+Unexpected IOException with stream: 2022-10-02 19:33:53.872  INFO 5692 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+
+
+# Created at 2022-10-02T19:33:53.900
+Unexpected IOException with stream: 2022-10-02 19:33:53.899  INFO 5692 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+
+
+# Created at 2022-10-02T19:34:02.948
+Unexpected IOException with stream: 2022-10-02 19:34:02.946  INFO 5692 --- [           main] com.usa.reto3v2.Reto3v2ApplicationTests  : Started Reto3v2ApplicationTests in 26.5 seconds (JVM running for 30.073)
+
+
+# Created at 2022-10-02T19:34:03.059
+Unexpected IOException: 5,1,com.usa.reto3v2.Reto3v2ApplicationTests,contextLoads,null,null,null
+
+
+# Created at 2022-10-02T19:34:03.540
+Unexpected IOException: 6,1,com.usa.reto3v2.Reto3v2ApplicationTests,contextLoads,null,null,null
+
+
+# Created at 2022-10-02T19:34:03.583
+Unexpected IOException: 2,1,org.apache.maven.surefire.junitplatform.JUnitPlatformProvider,com.usa.reto3v2.Reto3v2ApplicationTests,null,null,null
+
+
