@@ -2,7 +2,6 @@ package com.usa.reto3v2.service;
 
 import com.usa.reto3v2.entities.DTOs.CountClient;
 import com.usa.reto3v2.entities.DTOs.CountStatus;
-import com.usa.reto3v2.entities.Motorbike;
 import com.usa.reto3v2.entities.Reservation;
 import com.usa.reto3v2.repository.ReservationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,11 +21,10 @@ public class ReservationService {
 
     @Autowired
     private ReservationRepository reservationRepository;
-    //service get all
+
     public List<Reservation> getAll() {
         return reservationRepository.getAll();
     }
-    //service get id
     public Reservation get(Integer id) {
         return reservationRepository.getReservation(id).get();
     }
@@ -34,7 +32,7 @@ public class ReservationService {
     public Optional<Reservation> getReservation(int id) {
         return reservationRepository.getReservation(id);
     }
-    //service post
+
     public Reservation save(Reservation reservacion) {
         if (reservacion.getIdReservation() == null) {
             return reservationRepository.save(reservacion);
@@ -47,7 +45,7 @@ public class ReservationService {
             }
         }
     }
-    //service put
+
     public Reservation update(Reservation reservacion) {
         if (reservacion.getIdReservation() != null) {
             Optional<Reservation> rs = reservationRepository.getReservation(reservacion.getIdReservation());
@@ -82,7 +80,7 @@ public class ReservationService {
             return reservacion;
         }
     }
-    //service delete
+
     public boolean delete(int id) {
         boolean marca = false;
         Optional<Reservation> a = reservationRepository.getReservation(id);
@@ -93,7 +91,6 @@ public class ReservationService {
         return marca;
 
     }
-    //service get clients and reservations
     public List<CountClient> getTopClients(){
         return reservationRepository.getTopClients();
     }

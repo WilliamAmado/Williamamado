@@ -1,7 +1,6 @@
 package com.usa.reto3v2.controller;
 
 import com.usa.reto3v2.entities.Motorbike;
-import com.usa.reto3v2.entities.Motorbike;
 import com.usa.reto3v2.service.MotorbikeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
