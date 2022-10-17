@@ -14,19 +14,51 @@ public class CategoryRepository {
  @Autowired
     private CategoryCrudRepository categoryCrudRepository;
 
-    public List<Category> getAll() {
-        return (List<Category>) categoryCrudRepository.findAll();
+    public <S extends Category> S save(S entity) {
+        return categoryCrudRepository.save(entity);
     }
 
-    public Optional<Category> getCategory(int id) {
-        return categoryCrudRepository.findById(id);
+    public <S extends Category> Iterable<S> saveAll(Iterable<S> entities) {
+        return categoryCrudRepository.saveAll(entities);
     }
 
-    public Category save(Category categoria) {
-        return categoryCrudRepository.save(categoria);
+    public Optional<Category> findById(Integer integer) {
+        return categoryCrudRepository.findById(integer);
     }
 
-    public void delete(Category categoria) {
-        categoryCrudRepository.delete(categoria);
+    public boolean existsById(Integer integer) {
+        return categoryCrudRepository.existsById(integer);
+    }
+
+    public Iterable<Category> findAll() {
+        return categoryCrudRepository.findAll();
+    }
+
+    public Iterable<Category> findAllById(Iterable<Integer> integers) {
+        return categoryCrudRepository.findAllById(integers);
+    }
+
+    public long count() {
+        return categoryCrudRepository.count();
+    }
+
+    public void deleteById(Integer integer) {
+        categoryCrudRepository.deleteById(integer);
+    }
+
+    public void delete(Category entity) {
+        categoryCrudRepository.delete(entity);
+    }
+
+    public void deleteAllById(Iterable<? extends Integer> integers) {
+        categoryCrudRepository.deleteAllById(integers);
+    }
+
+    public void deleteAll(Iterable<? extends Category> entities) {
+        categoryCrudRepository.deleteAll(entities);
+    }
+
+    public void deleteAll() {
+        categoryCrudRepository.deleteAll();
     }
 }

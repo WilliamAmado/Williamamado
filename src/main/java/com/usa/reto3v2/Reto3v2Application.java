@@ -3,10 +3,11 @@ package com.usa.reto3v2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration;
+
+@SpringBootApplication
 
 
-@SpringBootApplication(exclude = {SecurityAutoConfiguration.class })
+
 public class Reto3v2Application {
 
     public static void main(String[] args) {

@@ -1,7 +1,6 @@
 package com.usa.reto3v2.service;
 
 import com.usa.reto3v2.entities.Category;
-import com.usa.reto3v2.entities.Motorbike;
 import com.usa.reto3v2.repository.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,62 +16,52 @@ public class CategoryService {
     @Autowired
     private CategoryRepository categoryRepository;
 
-    public List<Category> getAll() {
-        return categoryRepository.getAll();
-    }
-    //public List<Category> getAll(){
-    //return categoryRepository.getAll();
-    //}
-    public Category get(Integer id) {
-        return categoryRepository.getCategory(id).get();
-    }
-    public Optional<Category> getCategory(int id) {
-        return categoryRepository.getCategory(id);
+
+    public <S extends Category> S save(S entity) {
+        return categoryRepository.save(entity);
     }
 
-    public Category save(Category categoria) {
-        if (categoria.getId() == null) {
-            return categoryRepository.save(categoria);
-        } else {
-            Optional<Category> c = categoryRepository.getCategory(categoria.getId());
-            if (c.isPresent()) {
-                return categoria;
-            } else {
-                return categoryRepository.save(categoria);
-            }
-        }
+    public <S extends Category> Iterable<S> saveAll(Iterable<S> entities) {
+        return categoryRepository.saveAll(entities);
     }
 
-    public Category update(Category categoria) {
-        if (categoria.getId() != null) {
-            Optional<Category> ct = categoryRepository.getCategory(categoria.getId());
-            if (ct.isPresent()) {
-                if (categoria.getName() != null) {
-                    ct.get().setName(categoria.getName());
-                }
-                if (categoria.getDescription() != null) {
-                    ct.get().setDescription(categoria.getDescription());
-                }
-                if (categoria.getMotorbikes() != null) {
-                    ct.get().setMotorbikes(categoria.getMotorbikes());
-                }
-                categoryRepository.save(ct.get());
-                return ct.get();
-            } else {
-                return categoria;
-            }
-        } else {
-            return categoria;
-        }
+    public Optional<Category> findById(Integer integer) {
+        return categoryRepository.findById(integer);
     }
 
-    public boolean delete(int id) {
-        boolean marca = false;
-        Optional<Category> ctr = categoryRepository.getCategory(id);
-        if (ctr.isPresent()) {
-            categoryRepository.delete(ctr.get());
-            marca = true;
-        }
-        return marca;
+    public boolean existsById(Integer integer) {
+        return categoryRepository.existsById(integer);
+    }
+
+    public Iterable<Category> findAll() {
+        return categoryRepository.findAll();
+    }
+
+    public Iterable<Category> findAllById(Iterable<Integer> integers) {
+        return categoryRepository.findAllById(integers);
+    }
+
+    public long count() {
+        return categoryRepository.count();
+    }
+
+    public void deleteById(Integer integer) {
+        categoryRepository.deleteById(integer);
+    }
+
+    public void delete(Category entity) {
+        categoryRepository.delete(entity);
+    }
+
+    public void deleteAllById(Iterable<? extends Integer> integers) {
+        categoryRepository.deleteAllById(integers);
+    }
+
+    public void deleteAll(Iterable<? extends Category> entities) {
+        categoryRepository.deleteAll(entities);
+    }
+
+    public void deleteAll() {
+        categoryRepository.deleteAll();
     }
 }
