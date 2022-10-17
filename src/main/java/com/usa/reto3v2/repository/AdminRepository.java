@@ -1,7 +1,6 @@
 package com.usa.reto3v2.repository;
 
 import com.usa.reto3v2.entities.Admin;
-import com.usa.reto3v2.entities.Client;
 import com.usa.reto3v2.repository.crudRepository.AdminCrudRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
